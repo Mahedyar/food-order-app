@@ -21,6 +21,7 @@ const CartReducer = (state, action) => {
 };
 
 const CartProvider = (props) => {
+  
   const [cartState, dispatchCartAction] = useReducer(
     CartReducer,
     defaultCartState
@@ -38,6 +39,7 @@ const CartProvider = (props) => {
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };
+  
   return (
     <>
       <CartContext.Provider value={cartContext}>
